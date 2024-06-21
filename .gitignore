@@ -1,4 +1,6 @@
 pkg/
 src/
 python-cx-freeze-git/
+cx_Freeze/
 *.tar.zst
+*.sh
