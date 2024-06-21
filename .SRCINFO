@@ -1,0 +1,35 @@
+pkgbase = python-cx-freeze-git
+	pkgdesc = Create standalone executables from Python scripts (built from latest commit)
+	pkgver = r2017.1225084
+	pkgrel = 1
+	url = https://marcelotduarte.github.io/cx_Freeze
+	arch = x86_64
+	license = PSF-2.0
+	checkdepends = python-pytest-mock
+	checkdepends = python-bcrypt
+	checkdepends = python-cryptography
+	checkdepends = python-openpyxl
+	checkdepends = python-pandas
+	checkdepends = python-pillow
+	checkdepends = python-pydantic
+	checkdepends = python-pytz
+	checkdepends = rpm-tools
+	checkdepends = python-pytest-xdist
+	checkdepends = python-pytest-datafiles
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = git
+	depends = glibc
+	depends = python
+	depends = python-packaging
+	depends = python-setuptools
+	depends = python-filelock
+	depends = python-pyqt5
+	provides = python-cx-freeze-git
+	conflicts = python-cx-freeze-git
+	replaces = python-cx-freeze-git
+	source = python-cx-freeze-git::git+https://github.com/marcelotduarte/cx_Freeze#branch=main
+	sha256sums = SKIP
+
+pkgname = python-cx-freeze-git
