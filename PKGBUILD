@@ -7,7 +7,7 @@
 # [1]: https://gitlab.archlinux.org/archlinux/packaging/packages/python-cx-freeze
 
 pkgname=python-cx-freeze-git
-pkgver=r2032.40990b2
+pkgver=r2033.4122946
 pkgrel=1
 pkgdesc="Create standalone executables from Python scripts (built from latest commit)"
 arch=('x86_64')
