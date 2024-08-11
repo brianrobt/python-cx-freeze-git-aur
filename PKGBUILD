@@ -7,13 +7,12 @@
 # [1]: https://gitlab.archlinux.org/archlinux/packaging/packages/python-cx-freeze
 
 pkgname=python-cx-freeze-git
-pkgver=r2033.4122946
+pkgver=r2065.39d6011
 pkgrel=1
 pkgdesc="Create standalone executables from Python scripts (built from latest commit)"
 arch=('x86_64')
 url="https://marcelotduarte.github.io/cx_Freeze"
 license=('PSF-2.0')
-groups=()
 depends=('glibc' 'python' 'python-packaging' 'python-setuptools' 'python-filelock' 'python-pyqt5')
 makedepends=('python-wheel' 'python-build' 'python-installer' 'git')
 checkdepends=('python-pytest-mock' 'python-bcrypt' 'python-cryptography' 'python-openpyxl'
@@ -30,7 +29,7 @@ pkgver() {
 }
 
 build() {
-	cd "$srcdir/$pkgname"
+  cd "$srcdir/$pkgname"
   python -m build --wheel --no-isolation
 }
 
@@ -46,6 +45,6 @@ check() {
 }
 
 package() {
-	cd "$srcdir/$pkgname"
+  cd "$srcdir/$pkgname"
   python -m installer --destdir="$pkgdir" dist/*.whl
 }
