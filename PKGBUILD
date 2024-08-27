@@ -7,19 +7,44 @@
 # [1]: https://gitlab.archlinux.org/archlinux/packaging/packages/python-cx-freeze
 
 pkgname=python-cx-freeze-git
-pkgver=r2065.39d6011
+pkgver=r2066.6cdbad7
 pkgrel=1
 pkgdesc="Create standalone executables from Python scripts (built from latest commit)"
 arch=('x86_64')
-url="https://marcelotduarte.github.io/cx_Freeze"
+url="https://github.com/marcelotduarte/cx_Freeze"
 license=('PSF-2.0')
-depends=('glibc' 'python' 'python-packaging' 'python-setuptools' 'python-filelock' 'python-pyqt5')
-makedepends=('python-wheel' 'python-build' 'python-installer' 'git')
-checkdepends=('python-pytest-mock' 'python-bcrypt' 'python-cryptography' 'python-openpyxl'
-              'python-pandas' 'python-pillow' 'python-pydantic' 'python-pytz' 'rpm-tools' 'python-pytest-xdist' 'python-pytest-datafiles')
-provides=("${pkgname%}")
-conflicts=("${pkgname%}")
-replaces=("${pkgname%}")
+depends=(
+  'glibc'
+  'patchelf'
+  'python'
+  'python-filelock'
+  'python-packaging'
+  'python-pyqt5'
+  'python-setuptools'
+)
+makedepends=(
+  'git'
+  'python-build'
+  'python-installer'
+  'python-wheel'
+)
+checkdepends=(
+  'python-bcrypt'
+  'python-cryptography'
+  'python-openpyxl'
+  'python-pandas'
+  'python-pillow'
+  'python-pydantic'
+  'python-pytest'
+  'python-pytest-datafiles'
+  'python-pytest-mock'
+  'python-pytest-xdist'
+  'python-pytz'
+  'rpm-tools'
+)
+provides=('cxfreeze')
+conflicts=('cxfreeze')
+replaces=('python-cx-freeze')
 source=('python-cx-freeze-git::git+https://github.com/marcelotduarte/cx_Freeze#branch=main')
 sha256sums=('SKIP')
 
